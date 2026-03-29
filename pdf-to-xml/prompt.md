@@ -34,9 +34,9 @@ You MUST:
 
 This is a legislative bill showing amendments:
 
-1. **Underlined text** = NEW language being added. Has a solid line drawn BENEATH the text. Wrap in `<underline>` tags.
+1. **Underlined text** = NEW language being added to the law. Visually, these words have a continuous solid horizontal line drawn directly beneath the baseline of the text. The underline may be thin but it is always present under every character of the new language. Wrap in `<underline>` tags.
 
-2. **Strikethrough text** = OLD language being deleted. Has a line drawn THROUGH THE MIDDLE of the characters. Wrap in `<strikethrough>` tags.
+2. **Strikethrough text** = OLD language being deleted from the law. Visually, these words have a horizontal line drawn through the middle of the characters, partially obscuring them. Wrap in `<strikethrough>` tags.
 
 Key visual patterns:
 - Underlined passages can be LONG — spanning many consecutive lines. If text looks like newly inserted legislative language and has a line beneath it, the entire passage is likely underlined.
