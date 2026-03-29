@@ -38,6 +38,11 @@ This is a legislative bill showing amendments:
 
 2. **Strikethrough text** = OLD language being deleted. Has a line drawn THROUGH THE MIDDLE of the characters. Wrap in `<strikethrough>` tags.
 
+Key visual patterns:
+- Underlined passages can be LONG — spanning many consecutive lines. If text looks like newly inserted legislative language and has a line beneath it, the entire passage is likely underlined.
+- Strikethrough passages can also span many lines. If text has a line through it, the entire passage is struck through.
+- When strikethrough text is immediately followed by underlined text, it means old language was replaced with new language.
+
 Rules:
 - Place tags INSIDE `<Line>`, wrapping ONLY the affected words.
 - Be precise about boundaries — do not include adjacent unmarked words.
