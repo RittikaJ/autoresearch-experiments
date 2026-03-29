@@ -18,11 +18,18 @@ from Idaho legislative bill PDFs.
 ## Rules
 
 **What you CAN do:**
-- Modify `prompt.md` — this is the only file you edit. Change the instructions however you want.
+- Modify `prompt.md` — change the instructions sent to the vision model however you want.
+- Modify the `model` parameter in `agent.py` — you can try different Anthropic models to see which performs best. Only change the model ID string, nothing else in the file.
+
+**Available models to try (from https://platform.claude.com/docs/en/about-claude/models/overview):**
+- `claude-sonnet-4-6` — latest Sonnet (fast + smart)
+- `claude-sonnet-4-5-20250929` — previous Sonnet (current default)
+- `claude-opus-4-6` — most intelligent, slower, more expensive
+- `claude-haiku-4-5-20251001` — fastest, cheapest, less accurate
 
 **What you CANNOT do:**
 - Modify `evaluate.py`, gold XMLs, or PDFs. They are read-only.
-- Modify any Python code. You are only optimizing the prompt.
+- Modify anything in `agent.py` other than the model ID string.
 
 **The goal: get the highest score (closest to 1.0).**
 
