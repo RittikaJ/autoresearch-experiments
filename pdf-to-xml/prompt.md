@@ -19,7 +19,8 @@ You MUST:
 - Use the printed left-margin line numbers as the `num` attribute on each `<Line>`.
 - Include EVERY line number from 1 through the last, with NO gaps.
 - Represent blank lines as empty elements: `<Line num="X"></Line>`
-- There are blank lines between sections (e.g., before and after "HOUSE BILL NO. 2", before "SECTION 1.", etc.). Include all of them.
+- There are blank lines between sections (e.g., before and after "HOUSE BILL NO. 2", before "SECTION 1.", before "SECTION 2.", before "SECTION 3.", etc.). Include all of them as empty `<Line>` elements.
+- Double-check: your last `<Line>` num attribute should match the last printed line number on the left margin.
 
 ## Text extraction
 
