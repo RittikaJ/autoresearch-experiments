@@ -90,19 +90,12 @@ def convert_markdown(markdown: str) -> str:
 
 def _is_block_start(line):
     """Check if a line starts a block element."""
-    if line.startswith('```'):
-        return True
-    if re.match(r'^#{1,6}\s+', line):
-        return True
-    if re.match(r'^---$', line.strip()):
-        return True
-    if line.startswith('> ') or line == '>':
-        return True
-    if re.match(r'^- ', line):
-        return True
-    if re.match(r'^\d+\. ', line):
-        return True
-    return False
+    return (line.startswith('```') or
+            re.match(r'^#{1,6}\s+', line) or
+            re.match(r'^---$', line.strip()) or
+            line.startswith('> ') or line == '>' or
+            re.match(r'^- ', line) or
+            re.match(r'^\d+\. ', line))
 
 
 def _parse_unordered_list(lines, i, html_blocks, indent_level):
@@ -120,7 +113,6 @@ def _parse_unordered_list(lines, i, html_blocks, indent_level):
             i += 1
             # Check for nested sublist
             if i < len(lines) and lines[i].startswith(sub_prefix):
-                sub_items = []
                 sub_html = []
                 i = _parse_unordered_list(lines, i, sub_html, indent_level + 1)
                 # Attach sublist to last item
